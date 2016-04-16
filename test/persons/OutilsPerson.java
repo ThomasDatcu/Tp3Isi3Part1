@@ -25,4 +25,14 @@ public class OutilsPerson {
         }
         return res;
     }
+
+    public int methodeQ6(List<IPerson> list, GregorianCalendar gregorianCalendar){
+        int ageMax = -1;
+        for(IPerson p: list){
+            if(p.getAge(gregorianCalendar)> ageMax){
+                ageMax = p.getAge(gregorianCalendar);
+            }
+        }
+        return ageMax;
+    }
 }
