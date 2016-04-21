@@ -10,20 +10,18 @@ import java.util.List;
 public class OutilsPerson {
 
 
-    public List<IPerson> methodeQ5(List<IPerson> list, GregorianCalendar gregorianCalendar, int ageMin, int ageMax){
+    public int methodeQ5(List<IPerson> list, GregorianCalendar gregorianCalendar, int ageMin, int ageMax){
         List<IPerson> res = new ArrayList<>();
         if(ageMax<ageMin){
             throw new IllegalArgumentException();
         }
         for (IPerson p: list)
         {
-            if(p.wasBorn(gregorianCalendar)){
-                if(ageMin<p.getAge(gregorianCalendar) && p.getAge(gregorianCalendar) < ageMax){
-                    res.add(p);
-                }
+            if(ageMin<p.getAge(gregorianCalendar) && p.getAge(gregorianCalendar) < ageMax) {
+                res.add(p);
             }
         }
-        return res;
+        return res.size();
     }
 
     public int methodeQ6(List<IPerson> list, GregorianCalendar gregorianCalendar){

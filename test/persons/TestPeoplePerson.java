@@ -5,7 +5,7 @@ import java.util.GregorianCalendar;
 /**
  * Created by thomas on 30/03/16.
  */
-public class TestPeoplePersonne extends TestPerson {
+public class TestPeoplePerson extends TestPerson {
 
     public void setUp(){
         p1 = new PeoplePersonne("toto","tata",1990,10,1);
